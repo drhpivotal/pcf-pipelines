@@ -66,7 +66,7 @@ terraform plan \
   -var "db_silk_username=${DB_SILK_USERNAME}" \
   -var "db_silk_password=${DB_SILK_PASSWORD}" \
   -var "opsman_private_key=${OPSMAN_PRIVATE_KEY}" \
-  -var "opsman_public_key="${OPSMAN_PUBLIC_KEY}" \
+  -var "opsman_public_key=${OPSMAN_PUBLIC_KEY}" \
   -out terraform.tfplan \
   -state terraform-state/terraform.tfstate \
   pcf-pipelines/install-pcf/gcp/terraform
