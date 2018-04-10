@@ -93,6 +93,6 @@ terraform destroy -force \
   -var "db_locket_password=dontcare" \
   -var "db_silk_username=dontcare" \
   -var "db_silk_password=dontcare" \
-  -var "opsman_public_key" \
+  -var "opsman_public_key=dontcare" \
   -state-out $root/wipe-output/terraform.tfstate \
   pcf-pipelines/install-pcf/gcp/terraform
