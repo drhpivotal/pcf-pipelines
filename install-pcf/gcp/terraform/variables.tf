@@ -46,3 +46,6 @@ variable "db_locket_username" {}
 variable "db_locket_password" {}
 variable "db_silk_username" {}
 variable "db_silk_password" {}
+
+variable "opsman_public_key" {}
+variable "opsman_private_key" {}
