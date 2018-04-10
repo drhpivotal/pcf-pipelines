@@ -4,7 +4,7 @@ resource "google_compute_instance" "ops-manager" {
   machine_type = "n1-standard-2"
   zone         = "${var.gcp_zone_1}"
 
-  tags = ["${var.prefix}-opsman", "allow-https"]
+  tags = ["${var.prefix}-opsman", "allow-https", "allow-ssh"]
 
   boot_disk {
     initialize_params {
@@ -19,6 +19,10 @@ resource "google_compute_instance" "ops-manager" {
     access_config {
       nat_ip = "${google_compute_address.opsman.address}"
     }
+  }
+
+  metadata {
+   ssh_keys = "ubuntu:${opsman_public_key}"
   }
 
 }
