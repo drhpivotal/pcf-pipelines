@@ -53,6 +53,8 @@ params:
   DB_LOCKET_PASSWORD:
   DB_SILK_USERNAME:
   DB_SILK_PASSWORD:
+  OPSMAN_PRIVATE_KEY: 
+  OPSMAN_PUBLIC_KEY: 
 
 run:
   path: pcf-pipelines/install-pcf/gcp/tasks/create-infrastructure/task.sh
