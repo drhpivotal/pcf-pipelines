@@ -22,7 +22,7 @@ resource "google_compute_instance" "ops-manager" {
   }
 
   metadata {
-   ssh_keys = "ubuntu:${var.opsman_public_key}"
+   sshKeys = "ubuntu:${var.opsman_public_key}"
   }
 
 }
