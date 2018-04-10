@@ -21,15 +21,6 @@ resource "google_compute_instance" "ops-manager" {
     }
   }
 
-  provisioner "remote exec" {
-    inline = [
-      "sudo add-apt-repository -y ppa:certbot/certbot",
-      "sudo /usr/bin/apt-get -qy update",
-      "sudo apt-get -qy install certbot",
-      "sudo service nginx restart",
-      "sudo certbot certonly --webroot --webroot-path=/usr/share/nginx/html -d opsman.c0drh.pcflabs.io --agree-tos -m foo@pivotal.io -n",
-    ]
-  }
 }
 
 resource "google_storage_bucket" "director" {
